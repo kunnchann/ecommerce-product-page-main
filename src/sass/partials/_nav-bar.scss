@@ -1,0 +1,75 @@
+nav {
+  div:has(> ul) {
+    gap: 50px;
+    & + div {
+      gap: 80px;
+      & > a:last-child > img {
+        width: 55px;
+        border: 2.5px solid transparent;
+        border-radius: 50%;
+        transition: border-color 0.15s linear;
+        &:hover,
+        &:focus {
+          border-color: $orange;
+        }
+      }
+    }
+  }
+  li:has(.navbar-link) {
+    transition: font-weight 0.9s linear;
+  }
+  .navbar-link {
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+#emptyCart {
+  cursor: auto;
+  top: 219%;
+  left: -1055%;
+  width: 350px;
+  z-index: 95;
+  // opacity: 0; this is right
+  pointer-events: none;
+}
+#openCart {
+  cursor: auto;
+  top: 219%;
+  left: -1055%;
+  width: 350px;
+  z-index: 95;
+  // opacity: 0; this is right
+  pointer-events: none;
+}
+#cartDisplay {
+  transform: translateY(71px);
+}
+#deleteProduct {
+  cursor: pointer;
+}
+.h-186 {
+  height: 186px;
+}
+.h-207 {
+  height: 207px;
+}
+.sneaker-thumbnail {
+  width: 65px;
+}
+@include media-breakpoint-down(lg) {
+  nav {
+    div:has(> ul) {
+      & + div {
+        gap: 35px;
+      }
+    }
+    .mobile-toggler {
+      display: block !important;
+    }
+    .ul-media-query {
+      display: none !important;
+    }
+  }
+}

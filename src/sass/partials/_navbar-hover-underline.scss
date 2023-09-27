@@ -1,0 +1,15 @@
+.hover-underline {
+  position: absolute;
+  height: 5px;
+  left: 0;
+  top: 170%;
+  background-color: $orange;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.under-line-show {
+  opacity: 1;
+}
+.under-line-hide {
+  opacity: 0;
+}

@@ -1,0 +1,31 @@
+.swal2-title {
+  color: black !important;
+}
+.swal2-icon,
+.swal2-icon-content {
+  color: hsl(26, 100%, 55%) !important;
+  border-color: hsl(26, 100%, 55%) !important;
+}
+.swal2-success-line-tip,
+.swal2-success-line-long {
+  background-color: hsl(26, 100%, 55%) !important;
+}
+.swal2-success-ring {
+  border-color: hsl(26, 100%, 55%) !important;
+}
+.swal2-confirm {
+  background-color: transparent !important;
+  color: hsl(26, 100%, 55%) !important;
+  border: 2px solid hsl(26, 100%, 55%) !important;
+  box-shadow: none !important;
+  transition: all 0.1s ease;
+  &:hover {
+    background-image: none !important;
+    background-color: hsl(26, 100%, 55%) !important;
+    color: white !important;
+  }
+}
+.swal2-cancel {
+  background-color: hsl(26, 100%, 55%) !important;
+  box-shadow: none !important;
+}

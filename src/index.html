@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../nodemodules/animate.css/animate.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="position-relative">
+    <main id="app">
+      <!-- this div for cart funcition  -->
+      <div
+        class="w-100 d-none bg-transparent position-absolute"
+        id="cartDisplay"
+      ></div>
+      <!-- nav -->
+      <section class="p-2 p-lg-3 w-1400">
+        <nav class="px-1 px-lg-0">
+          <div
+            class="d-flex justify-content-between gap-lg-0 gap-4 align-items-center"
+          >
+            <div class="d-flex align-items-center">
+              <div
+                class="d-flex gap-4 justify-content-center align-items-center"
+              >
+                <a href="">
+                  <img
+                    src="../images/icon-menu.svg"
+                    alt="img"
+                    class="mobile-toggler d-none pt-2"
+                  />
+                </a>
+                <div
+                  class="custom-offcanvas p-4 d-lg-none position-absolute w-75 bg-white"
+                >
+                  <div class="mb-5">
+                    <img
+                      src="../images/icon-close.svg"
+                      alt="close_button"
+                      class="d-block ms-auto"
+                      id="offcanvas-close-btn"
+                    />
+                  </div>
+                  <h1 class="mb-4">
+                    <a href="" class="text-decoration-none text-black fw-bold"
+                      >Collections</a
+                    >
+                  </h1>
+                  <h1 class="mb-4">
+                    <a href="" class="text-decoration-none text-black fw-bold"
+                      >Men</a
+                    >
+                  </h1>
+                  <h1 class="mb-4">
+                    <a href="" class="text-decoration-none text-black fw-bold"
+                      >Women</a
+                    >
+                  </h1>
+                  <h1 class="mb-4">
+                    <a href="" class="text-decoration-none text-black fw-bold"
+                      >About</a
+                    >
+                  </h1>
+                  <h1 class="mb-4">
+                    <a href="" class="text-decoration-none text-black fw-bold"
+                      >Contact</a
+                    >
+                  </h1>
+                </div>
+                <div class="opacity d-lg-none position-absolute"></div>
+                <a href="">
+                  <img src="../images/logo.svg" alt="logo_img" />
+                </a>
+              </div>
+              <ul
+                class="list-group d-flex flex-row align-items-center ul-media-query position-relative ul-navbar-link-animation"
+              >
+                <div class="hover-underline"></div>
+              </ul>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="position-relative" id="emptyCardContainer">
+                <a href="" id="cartIcon" class="d-block">
+                  <img src="../images/icon-cart.svg" alt="" />
+
+                  <span
+                    class="badge rounded-pill text-bg-primary position-absolute translate-middle bg-orange text-white fw-bold"
+                    id="cartNumIcon"
+                    >0</span
+                  >
+                </a>
+              </div>
+
+              <a href="" id="avatar">
+                <img src="../images/image-avatar.png" alt="" class="" />
+              </a>
+            </div>
+          </div>
+        </nav>
+        <hr class="border-opacity-10 media-query-hide border-1 my-3 border-2" />
+      </section>
+      <div
+        class="d-lg-flex justify-content-around align-items-center gap-lg-2 w-1000 mx-lg-auto"
+      >
+        <!-- desktop size show img -->
+        <section class="desktop-show-img d-none d-lg-block ps-lg-3">
+          <div class="d-flex flex-column gap-4" id="desktopThumbnailsDiv">
+            <div id="heroImgDiv">
+              <img src="../images/image-product-1.jpg" class="hero-img" />
+            </div>
+          </div>
+        </section>
+        <div class="px-0 px-sm-5 px-lg-0">
+          <!-- mobile-img-carousel -->
+          <section class="mobile-img-carousel d-lg-none px-0 px-sm-5 px-lg-0">
+            <div>
+              <div id="carousels" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="../images/image-product-1.jpg"
+                      class="d-block w-100"
+                      alt="image-product-1"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../images/image-product-2.jpg"
+                      class="d-block w-100"
+                      alt="image-product-2"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../images/image-product-3.jpg"
+                      class="d-block w-100"
+                      alt="image-product-3"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../images/image-product-4.jpg"
+                      class="d-block w-100"
+                      alt="image-product-4"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carousels"
+                  data-bs-slide="prev"
+                >
+                  <div class="prev-btn-div">
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carousels"
+                  data-bs-slide="next"
+                >
+                  <div class="next-btn-div">
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </section>
+          <!-- article -->
+          <section class="pb-5 p-lg-150 w-lg-545 px-0 px-sm-5 px-lg-0">
+            <article class="py-4 px-3">
+              <p class="text-orange fw-bold">SNEAKER COMPANY</p>
+              <h1 class="fw-bolder my-3">
+                Fall Limited Edition <br />
+                Sneakers
+              </h1>
+              <p>
+                These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole, they’ll
+                withstand everything the weather can offer.
+              </p>
+              <div
+                class="price-show d-flex justify-content-between align-items-center flex-lg-column align-items-lg-start"
+              >
+                <div class="d-flex justify-content-between align-items-center">
+                  <p class="fw-bolder m-0">
+                    $<span id="productPrice">125.00</span>
+                  </p>
+                  <p class="bg-pale-orange m-0 text-orange fw-bold px-1">50%</p>
+                </div>
+                <p class="text-black-50 m-0"><del>$250.00</del></p>
+              </div>
+            </article>
+            <div class="d-lg-flex gap-lg-5 px-lg-3">
+              <div class="px-3 px-lg-0 mb-3 mb-lg-0 flex-grow-1">
+                <div
+                  class="bg-light-grayish-blue rounded px-4 py-3 d-flex justify-content-between align-items-center"
+                  id="amountDiv"
+                >
+                  <div id="minusIcon">
+                    <img
+                      src="../images/icon-minus.svg"
+                      alt="icon"
+                      class="px-3 user-select-none"
+                    />
+                  </div>
+                  <p class="fw-bold flex-grow-2 m-0" id="productAmount">0</p>
+                  <div id="plusIcon">
+                    <img
+                      src="../images/icon-plus.svg"
+                      alt="icon"
+                      class="px-3 user-select-none"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="px-3 px-lg-0 flex-grow-1">
+                <a
+                  class="d-flex d-flex text-decoration-none justify-content-center gap-3 py-3 rounded align-items-center bg-orange"
+                  id="addToCart"
+                >
+                  <img src="../images/icon-cart-btn.svg" alt="cart" />
+                  <p class="m-0 text-white fw-bold">Add to cart</p>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="../nodemodules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../nodemodules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.mobile-img-carousel {
+  z-index: 80;
+}
+
+.next-btn-div,
+.prev-btn-div {
+  width: 100%;
+  aspect-ratio: 2 / 2;
+  border-radius: 50%;
+  background-color: $white;
+  display: grid;
+  place-content: center;
+  margin-inline: 50px;
+}
+.next-btn-div {
+  margin-right: 50px;
+}
+.prev-btn-div {
+  margin-left: 50px;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  scale: 0.75;
+}
+
+.carousel-item > img {
+  height: 350px;
+  object-fit: cover;
+  object-position: top;
+}
